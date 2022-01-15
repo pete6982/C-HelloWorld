@@ -1,1 +1,10 @@
 /* put your code here, using the example */
+# include <iostream> using namespace std.
+if...
+{
+cout<<"Good Morning World"
+}
+if...
+{
+cout<<"Hello World"
+}
