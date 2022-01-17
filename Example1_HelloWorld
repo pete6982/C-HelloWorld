@@ -6,7 +6,7 @@
 //bring symbol names defined in the std namespace into your program's scope
 using namespace std;
 
-//initialization of your main function
+//initialization of your main function, or class. You can reference or call other classes in the main class
 int main() {
     //use cout to print Hello World
     cout << "Hello World";
