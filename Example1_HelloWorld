@@ -1,7 +1,13 @@
 /* do not modify this code */
+
+//this let's you read or write to the standard input/output streams
 #include <iostream> 
+
+//bring symbol names defined in the std namespace into your program's scope
 using namespace std;
 
+//initialization of your main function
 int main() {
+    //use cout to print Hello World
     cout << "Hello World";
 }
