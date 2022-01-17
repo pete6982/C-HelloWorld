@@ -1,0 +1,36 @@
+#include <iostream>
+//chrono let's us use various time related functions
+#include <chrono>
+
+using namespace std;
+
+//here we create the time_() class which returns the time in seconds since
+chrono::system_clock::rep time_(){
+	time_t aTime = time(NULL);
+
+	// Set the time to midnight
+	struct tm* tm = localtime(&aTime);
+	tm->tm_sec = 0;
+	tm->tm_min = 0;
+	tm->tm_hour = 0;
+	tm->tm_isdst = -1;
+	time_t midnight = mktime(tm)+18000;
+
+	// Create object representing now
+	struct timespec now;
+	clock_gettime(CLOCK_REALTIME, &now);
+
+	// Number of seconds (now) since Epoch
+	const uint64_t nowSecsSinceEpoch = now.tv_sec;
+
+	// Number of seconds (now) since midnight = seconds (now) since Epoch minus seconds (at midnight) since Epoch
+	const uint64_t time_s = nowSecsSinceEpoch - midnight;
+
+	    return time_s;
+}
+// end of the time_() class
+
+//here we use time_() in our main class
+int main(){
+    cout << time_() << endl;
+}
