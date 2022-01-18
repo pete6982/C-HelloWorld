@@ -11,15 +11,14 @@ int main() {
   cin >> number;
 
   // checks if the number is positive, negative, or zero
-  
   if (number > 0) {
     cout << "You entered a positive integer: " << number << endl;
 }
-else if (number < 0){
+  else if (number < 0){
     cout << "You entered a negative integer: " << number << endl;
 }
-else {
-    cout << "You entered integer zero: " << number << endl;
+  else {
+    cout << "You entered the integer zero: " << number << endl;
 }
 
   cout << "This statement is always executed.";
