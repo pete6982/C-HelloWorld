@@ -14,7 +14,7 @@ chrono::system_clock::rep time_(){
 	tm->tm_min = 0;
 	tm->tm_hour = 0;
 	tm->tm_isdst = -1;
-	time_t midnight = mktime(tm)+18000;
+	time_t midnight = mktime(tm)+21600;
 
 	// Create object representing now
 	struct timespec now;
