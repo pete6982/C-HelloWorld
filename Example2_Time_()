@@ -1,10 +1,12 @@
 #include <iostream>
 //chrono let's us use various time related functions
 #include <chrono>
+//cmath let's us use the floor() functions
+#include <cmath>
 
 using namespace std;
 
-//here we create the time_() class which returns the time in seconds since
+//here we create the time_() class which returns the time in seconds since midnight
 chrono::system_clock::rep time_(){
 	time_t aTime = time(NULL);
 
@@ -32,5 +34,11 @@ chrono::system_clock::rep time_(){
 
 //here we use time_() in our main class
 int main(){
-    cout << time_() << endl;
+    cout << "The time is " << time_() << " seconds past midnight." << endl;
+    
+    cout << "The time is " << time_()/3600.0 << " hours past midnight." << endl;
+    
+    cout << "The time is " << time_()/3600 << " hours and " << (time_()/3600.0-time_()/3600)*60 << " minutes past midnight." << endl;
+    
+    cout << "The time is " << time_()/3600 << " hours, " << floor((time_()/3600.0-time_()/3600)*60) << " minutes, and " << ((time_()/3600.0-time_()/3600)*60-floor((time_()/3600.0-time_()/3600)*60))*60 << " seconds past midnight." << endl;
 }
