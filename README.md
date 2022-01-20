@@ -12,3 +12,8 @@ From 6pm to just before 9pm, use the greeting "Good Evening World"
 From 9pm to midnight, use the greeting "Good Night World"
 
 To learn more about C++, go to https://www.programiz.com/cpp-programming
+
+For some basics,  go here: https://www.geeksforgeeks.org/c-programming-basics/
+
+Especially https://www.geeksforgeeks.org/writing-first-c-program-hello-world-example/
+ and https://www.geeksforgeeks.org/comments-in-c-c/
