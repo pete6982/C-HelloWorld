@@ -27,8 +27,14 @@ chrono::system_clock::rep time_(){
 
 	// Number of seconds (now) since midnight = seconds (now) since Epoch minus seconds (at midnight) since Epoch
 	const uint64_t time_s = nowSecsSinceEpoch - midnight;
+	
+	if (0>time_s) {
+		return time_s + (24 * 3600);
+	} else {
+		return time_s;
+	}
 
-	    return time_s;
+	
 }
 // end of the time_() class
 
